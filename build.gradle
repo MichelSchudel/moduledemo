@@ -1,0 +1,23 @@
+group 'nl.craftsmen'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.9
+
+repositories {
+    mavenCentral()
+}
+
+
+subprojects {
+    sourceCompatibility = 1.9
+    apply plugin: 'java'
+ 
+    repositories {
+        mavenCentral()
+    }
+	
+	
+	
+}
