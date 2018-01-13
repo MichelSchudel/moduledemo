@@ -1,0 +1,17 @@
+1. Dependencies laten zien
+2. Laten zien dat bar een dependency heeft naar commons lang en java util logging
+3. Bar runnen
+4. module-info.java toevoegen aan bar
+5. laten zien dat bar niet meer compileert, apache commons en en java util logging werken niet meer.
+6. java til logging dependency toevoegen aan module-info, nu werkt de logging import weer
+7. commons.lang3 toevoegen aan module-info, uitleggen dat het hier gaat om een zg automatic module op basis van filenamr
+8. Evt laten zien dat als je commons-lang3 vervangt door 3.7 dan heeft deze een automatic module name en kan je die gebruiken
+9. Laten zien dat Foo nog steeds werkt, dit is immers geen module dus wordt Bar beschouwd als normale jar
+
+10. Foomodule, module-info.java toevoegen. Laten zien dat de Foo class niet meer compiled.
+11. requires barmodule toevoegen. Het compileert nog steeds niet omdat Barmodule geen packages exporteert.
+12. Package export van root package (nl.craftsmen.java9demo.bar) aan barmodule toevoegen. Foo compileert nu ten dele; batHelper weghalen, deze willen we echt niet gebruiken.
+13. Class Foo runnen. Het klapt nu op de reflectie. Dit is omdat bar geen open module is. Voeg dit toe in Bar. En run de Foo class opnieuw.
+14. Laten zien dat je ook de hele bar module kan openen middels "open module". Je moet dan "opens" weer verwijderen.
+
+15. Jlink tonen met smallmodule.

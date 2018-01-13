@@ -1,0 +1,25 @@
+group 'nl.craftsmen'
+version '1.0-SNAPSHOT'
+
+ext.moduleName = 'nl.craftsmen.smallmodule'
+
+compileJava {
+    inputs.property("moduleName", moduleName)
+    doFirst {
+        options.compilerArgs = [
+                '--module-path', classpath.asPath,
+        ]
+        //classpath = files()
+    }
+
+ jar {
+        manifest {
+            attributes(
+                    'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+                    'Main-Class': 'nl.craftsmen.java9demo.small.SmallDemo'
+            )
+        }
+    }
+
+}
+
