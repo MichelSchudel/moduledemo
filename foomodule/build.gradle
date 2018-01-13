@@ -9,7 +9,7 @@ compileJava {
         options.compilerArgs = [
                 '--module-path', classpath.asPath,
         ]
-        classpath = files()
+        //classpath = files()
     }
 }
 
