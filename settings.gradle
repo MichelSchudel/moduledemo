@@ -12,3 +12,5 @@ include 'foomodule'
 include 'barmodule'
 
 rootProject.name = 'moduledemo'
+
+
