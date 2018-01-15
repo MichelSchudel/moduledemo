@@ -1,0 +1,8 @@
+
+
+
+module foomodule {
+
+
+    requires barmodule;
+}

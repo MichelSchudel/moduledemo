@@ -22,10 +22,19 @@ public class Bar {
     public Bar() {
         this.barHelper = new BarHelper();
     }
+
     public void execute() {
-        System.out.println(StringUtils.capitalize("this sentence should start with a capital 'T'"));
+        logWithApacheLangHelper("this sentence should start with a capital 'T'");
         logWithJavaLogger("This is logged with the java util logger");
+        executeBarHelper();
+    }
+
+    private void executeBarHelper() {
         barHelper.execute();
+    }
+
+    private void logWithApacheLangHelper(String s) {
+        System.out.println(StringUtils.capitalize(s));
     }
 
     private void logWithJavaLogger(String message) {
